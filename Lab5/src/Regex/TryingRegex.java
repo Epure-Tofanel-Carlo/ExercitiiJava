@@ -32,7 +32,11 @@ public class TryingRegex {
 
         String[] cuvinte = text.split(" ");
         int middle = cuvinte.length / 2;
-        System.out.println(cuvinte[middle - 1] + " " + cuvinte[middle]);
+        if (cuvinte.length % 2 == 0) {
+            System.out.println("Cuvintele de la mijloc: " + cuvinte[middle - 1] + " " + cuvinte[middle]);
+        } else {
+            System.out.println("Cuvantul de la mijloc: " + cuvinte[middle]);
+        }
 
 
         StringBuilder sb = new StringBuilder(text);
